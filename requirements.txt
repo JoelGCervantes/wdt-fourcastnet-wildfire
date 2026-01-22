@@ -1,0 +1,10 @@
+torch>=1.11.0          # Deep Learning framework (use version compatible with your CUDA)
+torchvision            # Computer vision utilities
+timm==0.6.12           # PyTorch Image Models (Required for the AFNO backbone)
+einops==0.6.0          # Tensor operations
+wandb                  # Weights & Biases (for logging experiments)
+h5py                   # For reading HDF5 data files
+netCDF4                # For reading weather data formats
+xarray                 # Labelled multi-dimensional arrays (easier data handling)
+matplotlib             # Plotting results
+tqdm                   # Progress bars
