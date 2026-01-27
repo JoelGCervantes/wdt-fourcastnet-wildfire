@@ -24,10 +24,3 @@ norm_stats/
 inference_output/
 *.log
 experiments/**/inference_out.log
-model_weights/
-*.ckpt
-norm_stats/
-*.npy
-inference_output/
-*.log
-experiments/**/inference_out.log

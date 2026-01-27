@@ -22,12 +22,18 @@ full_field: &FULL_FIELD
   max_epochs: 50
   batch_size: 1
 
-  #afno hyperparams
+  # Older
+  # #afno hyperparams
   num_blocks: 8
-  nettype: 'afno'
+  nettype: "afno"
   patch_size: 8
-  width: 56
-  modes: 32
+  # width: 56
+  # modes: 32
+
+  # Updated afno hyperparams
+  width: 768
+  modes: 8
+
   #options default, residual
   target: 'default' 
   in_channels: [0,1]
@@ -64,7 +70,7 @@ afno_backbone: &backbone
   log_to_wandb: !!bool True
   best_checkpoint_path: '/scratch/wdt/ai/FourCastNet/model_weights/backbone.ckpt'
   lr: 5E-4
-  batch_size: 1
+  batch_size: 2
   max_epochs: 150
   scheduler: 'CosineAnnealingLR'
   in_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]

@@ -279,4 +279,3 @@ if __name__ == "__main__":
     result = model(sample)
     print(result.shape)
     print(torch.norm(result))
-
