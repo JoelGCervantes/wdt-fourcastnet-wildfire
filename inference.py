@@ -6,8 +6,8 @@ import torch
 import torchvision
 import torch.nn as nn
 import matplotlib.pyplot as plt
-from utils.YParams import YParams
-from networks.afnonet import AFNONet
+from FCN.utils.YParams import YParams
+from FCN.networks.afnonet import AFNONet
 from collections import OrderedDict
 
 
