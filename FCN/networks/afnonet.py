@@ -17,7 +17,7 @@ from torch.nn.modules.container import Sequential
 from torch.utils.checkpoint import checkpoint_sequential
 from einops import rearrange, repeat
 from einops.layers.torch import Rearrange
-from utils.img_utils import PeriodicPad2d
+from ..utils.img_utils import PeriodicPad2d
 
 
 class Mlp(nn.Module):
