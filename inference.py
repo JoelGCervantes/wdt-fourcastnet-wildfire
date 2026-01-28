@@ -9,12 +9,15 @@ import matplotlib.pyplot as plt
 from FCN.utils.YParams import YParams
 from FCN.networks.afnonet import AFNONet
 from collections import OrderedDict
+from pathlib import Path
 
 
 
 def get_default_model_params():
     # We are going to use a default config. Please see github repo for other config examples
-    config_file = "./FourCastNet/config/AFNO.yaml"
+    config_file = str(
+        Path(__file__).resolve().parent / "FCN" /"config" / "AFNO.yaml"
+    )
     config_name = "afno_backbone"
     params = YParams(config_file, config_name)
     return params
