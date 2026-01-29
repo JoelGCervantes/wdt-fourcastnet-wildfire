@@ -86,6 +86,54 @@ def weighted_acc_channels(pred: torch.Tensor, target: torch.Tensor) -> torch.Ten
     target, dim=(-1,-2)))
     return result
 
+def inference(data_slice, model, prediction_length, idx):
+    # create memory for the different stats
+    n_out_channels = params['N_out_channels']
+    acc = torch.zeros((prediction_length, n_out_channels)).to(device, dtype=torch.float)
+    rmse = torch.zeros((prediction_length, n_out_channels)).to(device, dtype=torch.float)
+
+    # to conserve GPU mem, only save one channel (can be changed if sufficient GPU mem or move to CPU)
+    targets = torch.zeros((prediction_length, 1, img_shape_x, img_shape_y)).to(device, dtype=torch.float)
+    predictions = torch.zeros((prediction_length, 1, img_shape_x, img_shape_y)).to(device, dtype=torch.float)
+
+
+    with torch.no_grad():
+        for i in range(data_slice.shape[0]):
+            if i == 0:
+                first = data_slice[0:1]
+                future = data_slice[1:2]
+                pred = first
+                tar = first
+                # also save out predictions for visualizing channel index idx
+                targets[0,0] = first[0,idx]
+                predictions[0,0] = first[0,idx]
+                # predict
+                future_pred = model(first)
+            else:
+                if i < prediction_length - 1:
+                    future = data_slice[i+1:i+2]
+                future_pred = model(future_pred) # autoregressive step
+
+            if i < prediction_length - 1:
+                predictions[i+1,0] = future_pred[0,idx]
+                targets[i+1,0] = future[0,idx]
+
+            # compute metrics using the ground truth ERA5 data as "true" predictions
+            rmse[i] = weighted_rmse_channels(pred, tar) * std
+            acc[i] = weighted_acc_channels(pred-m, tar-m)
+            print('Predicted timestep {} of {}. {} RMS Error: {}, ACC: {}'.format(i, prediction_length, field, rmse[i,idx], acc[i,idx]))
+
+            pred = future_pred
+            tar = future
+
+    # copy to cpu for plotting/vis
+    acc_cpu = acc.cpu().numpy()
+    rmse_cpu = rmse.cpu().numpy()
+    predictions_cpu = predictions.cpu().numpy()
+    targets_cpu = targets.cpu().numpy()
+
+    return acc_cpu, rmse_cpu, predictions_cpu, targets_cpu
+
 def quantiles(x, qtile):
     ''' helper to compute quantiles based on qtile of the field '''
     n, c, h, w = x.shape
@@ -95,13 +143,13 @@ def quantiles(x, qtile):
 if __name__ == "__main__":
     
     # data and model paths
-    data_path = str(Path(__file__).resolve().parents[2] / "data" / "FCN_ERA5_DATA_V0" / "out_of_sample" / "2018.h5")
+    data_path = str(Path(__file__).resolve().parents[2] / "data" / "FCN_ERA5_DATA_V0" / "out_of_sample")
     data_file = os.path.join(data_path, "2018.h5")
-    model_path = "./ccai_demo/model_weights/FCN_weights_v0/backbone.ckpt"
-    global_means_path = "./ccai_demo/additional/stats_v0/global_means.npy"
-    global_stds_path = "./ccai_demo/additional/stats_v0/global_stds.npy"
-    time_means_path = "./ccai_demo/additional/stats_v0/time_means.npy"
-    land_sea_mask_path = "./ccai_demo/additional/stats_v0/land_sea_mask.npy"
+    model_path = str(Path(__file__).resolve().parent / "FCN" /"model_weights" / "backbone.ckpt")
+    global_means_path = str(Path(__file__).resolve().parent / "FCN" /"norm_stats" / "global_means.npy")
+    global_stds_path = str(Path(__file__).resolve().parent / "FCN" /"norm_stats" / "global_stds.npy")
+    time_means_path = str(Path(__file__).resolve().parent / "FCN" /"norm_stats" / "time_means.npy")
+    land_sea_mask_path = str(Path(__file__).resolve().parent / "FCN" /"norm_stats" / "land_sea_mask.npy")
     
     variables = ['u10', 'v10', 't2m', 'sp',
                  'msl', 't850', 'u1000',
