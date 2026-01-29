@@ -95,7 +95,7 @@ def quantiles(x, qtile):
 if __name__ == "__main__":
     
     # data and model paths
-    data_path = "./ccai_demo/data/FCN_ERA5_data_v0/out_of_sample"
+    data_path = str(Path(__file__).resolve().parents[2] / "data" / "FCN_ERA5_DATA_V0" / "out_of_sample" / "2018.h5")
     data_file = os.path.join(data_path, "2018.h5")
     model_path = "./ccai_demo/model_weights/FCN_weights_v0/backbone.ckpt"
     global_means_path = "./ccai_demo/additional/stats_v0/global_means.npy"
