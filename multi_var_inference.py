@@ -10,8 +10,6 @@ from FCN.utils.YParams import YParams
 from FCN.networks.afnonet import AFNONet
 from collections import OrderedDict
 from pathlib import Path
-from PIL import Image
-import io
 
 
 
@@ -141,40 +139,6 @@ def quantiles(x, qtile):
     ''' helper to compute quantiles based on qtile of the field '''
     n, c, h, w = x.shape
     return np.quantile(x.reshape((n,c,h*w)), q=qtile, axis=-1).squeeze()
-
-def save_gif(data_array, variable_name, output_path, fps=5):
-    """
-    Converts a [time, 1, lat, lon] array into an animated GIF.
-    """
-    frames = []
-    print(f"Generating GIF for {variable_name}...")
-    
-    for t in range(data_array.shape[0]):
-        # Create a plot for each time step
-        plt.figure(figsize=(10, 5))
-        plt.imshow(data_array[t, 0], cmap='viridis')
-        plt.title(f"{variable_name} - Forecast Hour: {t*6}")
-        plt.axis('off')
-        
-        # Save plot to a buffer to avoid saving hundreds of temp files to disk
-        buf = io.BytesIO()
-        plt.savefig(buf, format='png', bbox_inches='tight')
-        plt.close()
-        
-        # Open from buffer and add to frames
-        buf.seek(0)
-        frames.append(Image.open(buf))
-    
-    # Save the sequence as a GIF
-    frames[0].save(
-        output_path,
-        save_all=True,
-        append_images=frames[1:],
-        optimize=False,
-        duration=1000 // fps, # duration per frame in milliseconds
-        loop=0
-    )
-    print(f"GIF saved to {output_path}")
 
 
 if __name__ == "__main__":
@@ -307,10 +271,6 @@ if __name__ == "__main__":
     ax[1].set_title("ERA5 ground truth")
     fig.tight_layout()
     plt.savefig(output_dir / "Spatialtemporal_prediction.png")
-    
-    # Generate the GIF
-    gif_filename = output_dir / f"{field}_forecast.gif"
-    save_gif(predictions_cpu, field, gif_filename, fps=4)
     
     qs = 100
     qlim = 4
