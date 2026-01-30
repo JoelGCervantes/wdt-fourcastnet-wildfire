@@ -12,6 +12,7 @@ from collections import OrderedDict
 from pathlib import Path
 from PIL import Image
 import io
+import psutil
 
 
 
@@ -99,9 +100,21 @@ def inference(data_slice, model, prediction_length, idx):
     targets = torch.zeros((prediction_length, 1, img_shape_x, img_shape_y)).to(device, dtype=torch.float)
     predictions = torch.zeros((prediction_length, 1, img_shape_x, img_shape_y)).to(device, dtype=torch.float)
 
+    # Create CUDA events for precise GPU timing
+    start_event = torch.cuda.Event(enable_timing=True)
+    end_event = torch.cuda.Event(enable_timing=True)
+    
+    total_gpu_time = 0.0  # In milliseconds
+    total_cpu_time = 0.0  # In seconds
 
     with torch.no_grad():
         for i in range(data_slice.shape[0]):
+            
+            # start CPU timer 
+            cpu_start = time.perf_counter()
+            
+            # start GPU timer
+            start_event.record()
             if i == 0:
                 first = data_slice[0:1]
                 future = data_slice[1:2]
@@ -116,7 +129,17 @@ def inference(data_slice, model, prediction_length, idx):
                 if i < prediction_length - 1:
                     future = data_slice[i+1:i+2]
                 future_pred = model(future_pred) # autoregressive step
-
+                
+            # end GPU timer
+            end_event.record()
+            
+            # Synchronize so CPU waits for GPU to finish before calculating metrics
+            torch.cuda.synchronize()
+            
+            # Calculate GPU time for this step (result is in milliseconds)
+            step_gpu_ms = start_event.elapsed_time(end_event)
+            total_gpu_time += step_gpu_ms
+            
             if i < prediction_length - 1:
                 predictions[i+1,0] = future_pred[0,idx]
                 targets[i+1,0] = future[0,idx]
@@ -124,6 +147,13 @@ def inference(data_slice, model, prediction_length, idx):
             # compute metrics using the ground truth ERA5 data as "true" predictions
             rmse[i] = weighted_rmse_channels(pred, tar) * std
             acc[i] = weighted_acc_channels(pred-m, tar-m)
+            
+            # END CPU TIMER
+            cpu_end = time.perf_counter()
+            total_cpu_time += (cpu_end - cpu_start)
+            
+            print(f"Total GPU (Model) Time: {total_gpu_time / 1000:.4f} seconds")
+            print(f"Total CPU (Wall) Time: {total_cpu_time:.4f} seconds")
             print('Predicted timestep {} of {}. {} RMS Error: {}, ACC: {}'.format(i, prediction_length, field, rmse[i,idx], acc[i,idx]))
 
             pred = future_pred
@@ -142,39 +172,45 @@ def quantiles(x, qtile):
     n, c, h, w = x.shape
     return np.quantile(x.reshape((n,c,h*w)), q=qtile, axis=-1).squeeze()
 
-def save_gif(data_array, variable_name, output_path, fps=5):
+
+def save_gif(data_array, variable_name, output_path, fps=2):
     """
-    Converts a [time, 1, lat, lon] array into an animated GIF.
+    Converts a [time, 1, lat, lon] array into a high-quality animated GIF.
     """
     frames = []
     print(f"Generating GIF for {variable_name}...")
     
     for t in range(data_array.shape[0]):
-        # Create a plot for each time step
-        plt.figure(figsize=(10, 5))
-        plt.imshow(data_array[t, 0], cmap='viridis')
-        plt.title(f"{variable_name} - Forecast Hour: {t*6}")
-        plt.axis('off')
+        # Increase DPI for higher resolution
+        fig = plt.figure(figsize=(12, 6), dpi=120) 
+        ax = fig.add_subplot(111)
         
-        # Save plot to a buffer to avoid saving hundreds of temp files to disk
+        # 'interpolation' makes the fields look smoother rather than "blocky"
+        # 'bilinear' or 'lanczos' are great for atmospheric data
+        im = ax.imshow(data_array[t, 0], cmap='viridis', interpolation='bilinear')
+        
+        ax.set_title(f"{variable_name} - Forecast Hour: {t*6}", fontsize=14)
+        ax.axis('off')
+        
         buf = io.BytesIO()
-        plt.savefig(buf, format='png', bbox_inches='tight')
-        plt.close()
+        # Use higher DPI here as well for the buffer save
+        plt.savefig(buf, format='png', bbox_inches='tight', dpi=120)
+        plt.close(fig)
         
-        # Open from buffer and add to frames
         buf.seek(0)
         frames.append(Image.open(buf))
     
-    # Save the sequence as a GIF
+    # Save the sequence
     frames[0].save(
         output_path,
         save_all=True,
         append_images=frames[1:],
-        optimize=False,
-        duration=1000 // fps, # duration per frame in milliseconds
+        optimize=True, # Set to True to help with file size at higher resolutions
+        duration=1000 // fps, 
         loop=0
     )
     print(f"GIF saved to {output_path}")
+
 
 
 if __name__ == "__main__":
@@ -266,10 +302,21 @@ if __name__ == "__main__":
     print(data.shape)
     print("Shape of data = {}".format(data.shape))
 
+    # Reset stats to get a clean peak reading
+    if torch.cuda.is_available():
+        torch.cuda.reset_peak_memory_stats()
+    
     # run inference
     data = (data - means)/stds # standardize the data
     data = torch.as_tensor(data).to(device, dtype=torch.float) # move to gpu for inference
     acc_cpu, rmse_cpu, predictions_cpu, targets_cpu = inference(data, model, prediction_length, idx=idx_vis)
+    
+    # Check peak usage
+    if torch.cuda.is_available():
+        peak_mem = torch.cuda.max_memory_allocated() / (1024**2) # Convert to MB
+        reserved_mem = torch.cuda.max_memory_reserved() / (1024**2)
+        print(f"Peak GPU Memory Allocated: {peak_mem:.2f} MB")
+        print(f"Peak GPU Memory Reserved: {reserved_mem:.2f} MB")
     
     # plot the acc and rmse metrics
     fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(15, 5))
@@ -310,7 +357,7 @@ if __name__ == "__main__":
     
     # Generate the GIF
     gif_filename = output_dir / f"{field}_forecast.gif"
-    save_gif(predictions_cpu, field, gif_filename, fps=4)
+    save_gif(predictions_cpu, field, gif_filename, fps=2)
     
     qs = 100
     qlim = 4
