@@ -152,12 +152,15 @@ def inference(data_slice, model, prediction_length, idx):
             cpu_end = time.perf_counter()
             total_cpu_time += (cpu_end - cpu_start)
             
-            print(f"Total GPU (Model) Time: {total_gpu_time / 1000:.4f} seconds")
-            print(f"Total CPU (Wall) Time: {total_cpu_time:.4f} seconds")
             print('Predicted timestep {} of {}. {} RMS Error: {}, ACC: {}'.format(i, prediction_length, field, rmse[i,idx], acc[i,idx]))
-
+            
             pred = future_pred
             tar = future
+    
+    
+    print(f"Total GPU (Model) Time: {total_gpu_time / 1000:.4f} seconds")
+    print(f"Total CPU (Wall) Time: {total_cpu_time:.4f} seconds")
+            
 
     # copy to cpu for plotting/vis
     acc_cpu = acc.cpu().numpy()
@@ -187,7 +190,7 @@ def save_gif(data_array, variable_name, output_path, fps=2):
         
         # 'interpolation' makes the fields look smoother rather than "blocky"
         # 'bilinear' or 'lanczos' are great for atmospheric data
-        im = ax.imshow(data_array[t, 0], cmap='viridis', interpolation='bilinear')
+        im = ax.imshow(data_array[t, 0], cmap='bwr', interpolation='bilinear')
         
         ax.set_title(f"{variable_name} - Forecast Hour: {t*6}", fontsize=14)
         ax.axis('off')
@@ -211,6 +214,9 @@ def save_gif(data_array, variable_name, output_path, fps=2):
     )
     print(f"GIF saved to {output_path}")
 
+def get_ram_usage():
+    process = psutil.Process(os.getpid())
+    return process.memory_info().rss / (1024**2)  # Return in MB
 
 
 if __name__ == "__main__":
@@ -289,18 +295,26 @@ if __name__ == "__main__":
     # setup data for inference
     dt = 1 # time step (x 6 hours)
     ic = 0 # start the inference from here
-    prediction_length = 20 # number of steps (x 6 hours)
+    prediction_length = 28 # number of steps (x 6 hours)
 
     # which field to track for visualization
     field = 't2m'
     idx_vis = variables.index(field) # also prints out metrics for this field
 
+    # Track RAM before loading
+    ram_before = get_ram_usage()
+    print(f"RAM Usage before loading data: {ram_before:.2f} MB")
+    
     # get prediction length slice from the data
     print('Loading inference data')
     print('Inference data from {}'.format(data_file))
     data = h5py.File(data_file, 'r')['fields'][ic:(ic+prediction_length*dt):dt,in_channels,0:img_shape_x]
     print(data.shape)
     print("Shape of data = {}".format(data.shape))
+    
+    ram_after = get_ram_usage()
+    print(f"RAM Usage after loading data: {ram_after:.2f} MB")
+    print(f"Total RAM used by this data slice: {ram_after - ram_before:.2f} MB")
 
     # Reset stats to get a clean peak reading
     if torch.cuda.is_available():
@@ -323,7 +337,7 @@ if __name__ == "__main__":
     start = 0
     end = prediction_length #  < prediction_lenght forecast
 
-    field = 'u10' # change this to other fields such as z500
+    #field = 'u10' # change this to other fields such as z500
     idx_metric = variables.index(field) # plot metrics for this field
 
     hrs = np.arange(0, end*6, 6)
