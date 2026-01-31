@@ -298,7 +298,7 @@ if __name__ == "__main__":
     prediction_length = 28 # number of steps (x 6 hours)
 
     # which field to track for visualization
-    field = 't2m'
+    field = 'v10'
     idx_vis = variables.index(field) # also prints out metrics for this field
 
     # Track RAM before loading
@@ -407,7 +407,7 @@ if __name__ == "__main__":
     ax.legend()
     plt.tight_layout()
     plt.savefig(output_dir / "extreme_value_analysis.png")
-    
+    '''
     # which field to track for visualization
     field = 'msl' # mean surface level pressure
     idx_vis = variables.index(field) # also prints out metrics for this field
@@ -463,6 +463,7 @@ if __name__ == "__main__":
     plt.plot(np.array(track_pred_x) + offset , np.array(track_pred_y) + offset, c = 'r', label="Forecast")
     plt.legend()
     plt.savefig(output_dir / "hurricane_track_visualization.png")
+    '''
     
     
 
