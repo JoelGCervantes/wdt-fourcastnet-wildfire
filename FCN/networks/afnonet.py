@@ -21,7 +21,7 @@ from torch.nn.modules.container import Sequential
 from torch.utils.checkpoint import checkpoint_sequential
 from einops import rearrange, repeat
 from einops.layers.torch import Rearrange
-from ..utils.img_utils import PeriodicPad2d
+from utils.img_utils import PeriodicPad2d
 
 
 class Mlp(nn.Module):
@@ -173,6 +173,41 @@ class PrecipNet(nn.Module):
         return x
 
 class AFNONet(nn.Module):
+    """
+    Adaptive Fourier Neural Operator (AFNO) Network for High-Resolution Weather Forecasting.
+
+    This model implements the FourCastNet architecture, which treats weather forecasting 
+    as an image-to-image translation task. It tokenizes global atmospheric grids into 
+    patches and processes them using a series of Fourier-based Transformer blocks to 
+    capture global spatial dependencies efficiently.
+
+    Args:
+        params (Argparse): Global parameters containing network configuration (patch_size, 
+            channels, etc.).
+        img_size (tuple): Dimensions of the input global grid (Height, Width). 
+            Default: (720, 1440).
+        patch_size (tuple): Dimensions of the non-overlapping patches. Default: (16, 16).
+        in_chans (int): Number of input atmospheric variables (plus optional orography).
+        out_chans (int): Number of variables to predict.
+        embed_dim (int): Hidden dimension size for the Transformer tokens. Default: 768.
+        depth (int): Number of AFNO blocks (layers). Default: 12.
+        mlp_ratio (float): Expansion factor for the MLP hidden layer. Default: 4.0.
+        drop_rate (float): Dropout probability for embeddings.
+        drop_path_rate (float): Stochastic depth rate for residual connections.
+        num_blocks (int): Number of weight blocks for the AFNO spectral operator.
+        sparsity_threshold (float): Threshold for soft-thresholding in the frequency domain.
+        hard_thresholding_fraction (float): Fraction of frequencies kept after thresholding.
+
+    Attributes:
+        patch_embed (PatchEmbed): Layer that converts raw grid data into a sequence of tokens.
+        pos_embed (nn.Parameter): Learnable spatial encoding added to tokens to retain 
+            geographic location information.
+        blocks (nn.ModuleList): The stack of AFNO blocks that perform frequency-domain 
+            mixing and MLP refinement.
+        head (nn.Linear): Final projection layer that maps hidden embeddings back to the 
+            pixel-space patch dimensions.
+    """
+
     def __init__(
             self,
             params,
@@ -262,6 +297,23 @@ class AFNONet(nn.Module):
 
 
 class PatchEmbed(nn.Module):
+    """
+    Image to Patch Embedding.
+
+    This module divides a 2D image (or global weather grid) into non-overlapping patches, 
+    projects each patch into a linear embedding space, and flattens the result into a 
+    sequence of tokens suitable for Transformer blocks.
+
+    Args:
+        img_size (tuple): The input image dimensions (height, width). Default: (224, 224).
+        patch_size (tuple): The dimensions of each patch (height, width). Default: (16, 16).
+        in_chans (int): Number of input channels (e.g., weather variables). Default: 3.
+        embed_dim (int): The dimension of the resulting embedding vector. Default: 768.
+
+    Attributes:
+        num_patches (int): Total number of patches generated from the input image.
+        proj (nn.Module): A 2D Convolutional layer used for patch extraction and projection.
+    """
     def __init__(self, img_size=(224, 224), patch_size=(16, 16), in_chans=3, embed_dim=768):
         super().__init__()
         num_patches = (img_size[1] // patch_size[1]) * (img_size[0] // patch_size[0])

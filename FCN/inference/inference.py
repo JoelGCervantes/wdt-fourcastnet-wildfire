@@ -53,6 +53,8 @@ sys.path.append(os.path.dirname(os.path.realpath(__file__)) + '/../')
 from numpy.core.numeric import False_
 import h5py
 import torch
+from ruamel.yaml.scalarfloat import ScalarFloat # "***added import***"
+torch.serialization.add_safe_globals([ScalarFloat]) # "***added***"
 import torchvision
 from torchvision.utils import save_image
 import torch.nn as nn
@@ -87,7 +89,7 @@ def gaussian_perturb(x, level=0.01, device=0):
 def load_model(model, params, checkpoint_file):
     model.zero_grad()
     checkpoint_fname = checkpoint_file
-    checkpoint = torch.load(checkpoint_fname)
+    checkpoint = torch.load(checkpoint_fname, weights_only=False)
     try:
         new_state_dict = OrderedDict()
         for key, val in checkpoint['model_state'].items():
