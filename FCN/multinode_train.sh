@@ -1,15 +1,15 @@
 #!/bin/bash
 # Script: train.sh
-# Purpose: Training FourCastNet on Wildfire data
+# Purpose: FourCastNet multi-node distributed training
 # Author: garciac2
 
 #SBATCH -p normal
 #SBATCH -t 24:00:00        # Training takes longer than inference
 #SBATCH -J FCN_TRAIN
 #SBATCH --output=logs/%x_%j.out
-#SBATCH -N 1               # Number of nodes
+#SBATCH -N 10               # Number of nodes
 #SBATCH --gres=gpu:4       # Use 1 GPU (change to gpu:2 if you want to speed up)
-#SBATCH --ntasks=1	   # Launch only 1 manager task (torchrun handles multi-process spawning)
+#SBATCH --ntasks-per-node=1	   # Launch only 1 manager task (torchrun handles multi-process spawning)
 #SBATCH --cpus-per-task=40 # CPU cores (processors) assigned to each individual task (data loading) ***scale with number of gpus***
 #SBATCH --mem=0
 
@@ -24,9 +24,19 @@ mkdir -p logs
 source ../env/bin/activate
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 
+MASTER_ADDR=$(scontrol show hostnames "$SLURM_JOB_NODELIST" | head -n 1)
+export MASTER_PORT=29500
+export NODE_RANK=$SLURM_PROCID # calculates rank of node
+
 # Use torchrun to launch training. 
 # --nproc_per_node should match the number of GPUs requested in --gres.
-torchrun --nproc_per_node=2 \
+srun torchrun \
+    --nnodes=10 \
+    --nproc_per_node=4 \
+    --node_rank=$NODE_RANK \
+    --rdzv_id=$SLURM_JOB_ID \
+    --rdzv_backend=c10d \
+    --rdzv_endpoint="$MASTER_ADDR:$MASTER_PORT" \
     train.py \
     --config afno_backbone \
-    --run_num 1 \
+    --run_num 2
