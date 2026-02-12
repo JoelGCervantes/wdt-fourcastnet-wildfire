@@ -3,11 +3,11 @@ full_field: &FULL_FIELD
   loss: 'l2'
   lr: 1E-3
   scheduler: 'ReduceLROnPlateau'
-  num_data_workers: 0
+  num_data_workers: 10
   dt: 1 # how many timesteps ahead the model will predict
   n_history: 0 #how many previous timesteps to consider
   prediction_type: 'iterative'
-  prediction_length: 41 #applicable only if prediction_type == 'iterative'
+  prediction_length: 40 #applicable only if prediction_type == 'iterative'
   n_initial_conditions: 5 #applicable only if prediction_type == 'iterative'
   ics_type: "default"
   save_raw_forecasts: !!bool True
@@ -42,7 +42,7 @@ full_field: &FULL_FIELD
   train_data_path: '/scratch/wdt/data/FCN_ERA5_DATA_V0/train'
   valid_data_path: '/scratch/wdt/data/FCN_ERA5_DATA_V0/test'
   inf_data_path: '/scratch/wdt/data/FCN_ERA5_DATA_V0/out_of_sample' # test set path for inference
-  exp_dir: '/scratch/wdt/ai/wdt-fcn-wildfire/model_weights'
+  exp_dir: '/scratch/wdt/ai/wdt-fcn-wildfire/experiments'
   time_means_path:   '/scratch/wdt/ai/wdt-fcn-wildfire/norm_stats/time_means.npy'
   global_means_path: '/scratch/wdt/ai/wdt-fcn-wildfire/FCN/norm_stats/global_means.npy'
   global_stds_path:  '/scratch/wdt/ai/wdt-fcn-widlfire/FCN/norm_stats/global_stds.npy'
@@ -68,7 +68,7 @@ full_field: &FULL_FIELD
 afno_backbone: &backbone
   <<: *FULL_FIELD
   log_to_wandb: !!bool True
-  best_checkpoint_path: '/scratch/wdt/ai/wdt-fcn-wildfire/FCN/model_weights/backbone.ckpt'
+  best_checkpoint_path: '/scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/backbone.ckpt'
   lr: 5E-4
   batch_size: 2
   max_epochs: 150
@@ -77,7 +77,7 @@ afno_backbone: &backbone
   out_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
   orography: !!bool False
   orography_path: None 
-  exp_dir: '/scratch/wdt/ai/wdt-fcn-wildfire/FCN/model_weights'
+  exp_dir: '/scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments'
   train_data_path: '/scratch/wdt/data/FCN_ERA5_DATA_V0/train'
   valid_data_path: '/scratch/wdt/data/FCN_ERA5_DATA_V0/test'
   inf_data_path:   '/scratch/wdt/data/FCN_ERA5_DATA_V0/out_of_sample'

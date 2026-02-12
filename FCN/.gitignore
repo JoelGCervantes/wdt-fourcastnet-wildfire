@@ -13,7 +13,9 @@ norm_stats/
 
 inference_output/
 *.log
-experiments/**/inference_out.log
+experiments/*
+!experiments/.gitkeep
+wandb/
 outputs/
 runs/
 logs/
