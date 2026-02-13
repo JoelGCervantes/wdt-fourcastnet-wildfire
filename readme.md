@@ -76,10 +76,12 @@ The training job is configured for **multi-node distributed training** using `to
 ### Submitting a Training Job
 
 ```bash
-sbatch submit_job.sh
+cd FCN/
+
+sbatch train.sh
 ```
 
-Monitor your run via W&B (Weights & Biases) — the training backbone logs process memory, loss curves, and throughput metrics automatically.
+Monitor your run via wandb W&B (Weights & Biases) — the training backbone logs process memory, loss curves, and throughput metrics automatically.
 
 ---
 
@@ -88,10 +90,10 @@ Monitor your run via W&B (Weights & Biases) — the training backbone logs proce
 Run inference on a trained checkpoint:
 
 ```bash
-python inference.py \
-  --checkpoint /path/to/checkpoint.pt \
-  --config /path/to/config.yaml \
-  --output_dir ./visualizations
+cd FCN/
+
+# Ensemble forecasts
+sbatch infernce.sh # use val_inference.sh for multiple initial condition forecasts
 ```
 
 ---
@@ -145,13 +147,10 @@ If you use this code or build on this work, please cite:
   author       = {Joel Garcia-Cervantes},
   title        = {WDT FourCastNet: Wildfire Spread Forecasting on HPC},
   year         = {2025},
-  organization = {NASA Wildfire Digital Twin / Penn State University},
+  organization = {NASA Wildfire Digital Twin / Portland State University},
   url          = {https://github.com/JoelGCervantes/wdt-fourcastnet-wildfire}
 }
 ```
 
 ---
 
-## License
-
-This project is for research purposes. Please contact the author before use in derivative works.
