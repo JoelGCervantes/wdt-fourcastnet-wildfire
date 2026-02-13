@@ -67,10 +67,11 @@ full_field: &FULL_FIELD
 
 afno_backbone: &backbone
   <<: *FULL_FIELD
+  resuming: !!bool True # set to false on first run if splitting training up on multiple runs
   log_to_wandb: !!bool True
   best_checkpoint_path: '/scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/backbone.ckpt'
   lr: 5E-4
-  batch_size: 2
+  batch_size: 20
   max_epochs: 150
   scheduler: 'CosineAnnealingLR'
   in_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
