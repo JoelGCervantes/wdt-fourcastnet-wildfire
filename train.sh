@@ -17,11 +17,11 @@ module load python/3.12.12
 module load cuda/12.9.0
 
 unset LD_LIBRARY_PATH
+DIR_PATH="/scratch/wdt/ai/wdt-fcn-wildfire"
 
-cd /scratch/wdt/ai/wdt-fcn-wildfire/FCN
-mkdir -p logs
+cd ${DIR_PATH}/FCN
 
-source ../env/bin/activate
+source ${DIR_PATH}/env/bin/activate
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 
 MASTER_ADDR=$(scontrol show hostnames "$SLURM_JOB_NODELIST" | head -n 1)
@@ -31,7 +31,7 @@ export NODE_RANK=$SLURM_PROCID # calculates rank of node
 # Use torchrun to launch training. 
 # --nproc_per_node should match the number of GPUs requested in --gres.
 srun torchrun \
-    --nnodes=5 \
+    --nnodes=$SLURM_NNODES \
     --nproc_per_node=4 \
     --node_rank=$NODE_RANK \
     --rdzv_id=$SLURM_JOB_ID \

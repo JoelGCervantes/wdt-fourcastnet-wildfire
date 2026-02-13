@@ -1,0 +1,442 @@
+W0213 01:24:13.009000 150062 torch/distributed/run.py:852] 
+W0213 01:24:13.009000 150062 torch/distributed/run.py:852] *****************************************
+W0213 01:24:13.009000 150062 torch/distributed/run.py:852] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0213 01:24:13.009000 150062 torch/distributed/run.py:852] *****************************************
+W0213 01:24:13.057000 180439 torch/distributed/run.py:852] 
+W0213 01:24:13.057000 180439 torch/distributed/run.py:852] *****************************************
+W0213 01:24:13.057000 180439 torch/distributed/run.py:852] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0213 01:24:13.057000 180439 torch/distributed/run.py:852] *****************************************
+W0213 01:24:13.244000 1657351 torch/distributed/run.py:852] 
+W0213 01:24:13.244000 1657351 torch/distributed/run.py:852] *****************************************
+W0213 01:24:13.244000 1657351 torch/distributed/run.py:852] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0213 01:24:13.244000 1657351 torch/distributed/run.py:852] *****************************************
+W0213 01:24:13.250000 152009 torch/distributed/run.py:852] 
+W0213 01:24:13.250000 152009 torch/distributed/run.py:852] *****************************************
+W0213 01:24:13.250000 152009 torch/distributed/run.py:852] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0213 01:24:13.250000 152009 torch/distributed/run.py:852] *****************************************
+W0213 01:24:24.542000 158381 torch/distributed/run.py:852] 
+W0213 01:24:24.542000 158381 torch/distributed/run.py:852] *****************************************
+W0213 01:24:24.542000 158381 torch/distributed/run.py:852] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0213 01:24:24.542000 158381 torch/distributed/run.py:852] *****************************************
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+2026-02-13 01:24:35,612 - root - INFO - rank 14, begin data loader init
+2026-02-13 01:24:35,613 - root - INFO - rank 13, begin data loader init
+2026-02-13 01:24:35,613 - root - INFO - rank 12, begin data loader init
+2026-02-13 01:24:35,615 - root - INFO - rank 15, begin data loader init
+2026-02-13 01:24:35,623 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,623 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,623 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,623 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,624 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,624 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,624 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,624 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,624 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,624 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,624 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,624 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,624 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,624 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,625 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,625 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,625 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,625 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,625 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,625 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,630 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,630 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,630 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,630 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,632 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,632 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,632 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,632 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,632 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,632 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,632 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,632 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,632 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,632 - root - INFO - rank 12, data loader initialized
+2026-02-13 01:24:35,632 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,632 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,632 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,632 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,632 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,632 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,632 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,632 - root - INFO - rank 13, data loader initialized
+2026-02-13 01:24:35,632 - root - INFO - rank 14, data loader initialized
+2026-02-13 01:24:35,632 - root - INFO - rank 15, data loader initialized
+2026-02-13 01:24:35,747 - root - INFO - rank 4, begin data loader init
+2026-02-13 01:24:35,747 - root - INFO - rank 7, begin data loader init
+2026-02-13 01:24:35,748 - root - INFO - rank 5, begin data loader init
+2026-02-13 01:24:35,752 - root - INFO - rank 6, begin data loader init
+2026-02-13 01:24:35,754 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,754 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,754 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,755 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,755 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,755 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,755 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,755 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,755 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,755 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,755 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,755 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,755 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,755 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,755 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,755 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,756 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,756 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,757 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,757 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,758 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,758 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,759 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,759 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,760 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,760 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,760 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,760 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,760 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,760 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,760 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,760 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,760 - root - INFO - rank 7, data loader initialized
+2026-02-13 01:24:35,760 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,760 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,760 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,760 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,760 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,760 - root - INFO - rank 5, data loader initialized
+2026-02-13 01:24:35,760 - root - INFO - rank 4, data loader initialized
+2026-02-13 01:24:35,760 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,760 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,760 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,760 - root - INFO - rank 6, data loader initialized
+2026-02-13 01:24:35,848 - root - INFO - rank 3, begin data loader init
+2026-02-13 01:24:35,848 - root - INFO - rank 2, begin data loader init
+2026-02-13 01:24:35,849 - root - INFO - rank 1, begin data loader init
+2026-02-13 01:24:35,850 - root - INFO - rank 18, begin data loader init
+2026-02-13 01:24:35,850 - root - INFO - rank 17, begin data loader init
+2026-02-13 01:24:35,850 - root - INFO - rank 19, begin data loader init
+2026-02-13 01:24:35,850 - root - INFO - rank 16, begin data loader init
+2026-02-13 01:24:35,851 - root - INFO - --------------- Versions ---------------
+2026-02-13 01:24:35,856 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,856 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,856 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,857 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,857 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,857 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,857 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:35,857 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,857 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,857 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,857 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,858 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,858 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,858 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,858 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,858 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,858 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,858 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,858 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,858 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,858 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,858 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,858 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,858 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,862 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,862 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,862 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,863 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,863 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,863 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,863 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,863 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,863 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,863 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,863 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,863 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,863 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,863 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,863 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,863 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,864 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,864 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,864 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,864 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,863 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,863 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,864 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,864 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,863 - root - INFO - rank 18, data loader initialized
+2026-02-13 01:24:35,864 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,863 - root - INFO - rank 17, data loader initialized
+2026-02-13 01:24:35,863 - root - INFO - rank 19, data loader initialized
+2026-02-13 01:24:35,864 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,864 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,864 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,864 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,864 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,864 - root - INFO - rank 2, data loader initialized
+2026-02-13 01:24:35,864 - root - INFO - rank 1, data loader initialized
+2026-02-13 01:24:35,864 - root - INFO - rank 3, data loader initialized
+2026-02-13 01:24:35,865 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:35,865 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:35,866 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:35,866 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:35,866 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:35,866 - root - INFO - rank 16, data loader initialized
+2026-02-13 01:24:35,879 - root - INFO - git branch: b'* master'
+2026-02-13 01:24:35,891 - root - INFO - git hash: b'ca2c3ff8c61d61b13b8eb4b816c22b2e13681d84'
+2026-02-13 01:24:35,891 - root - INFO - Torch: 2.10.0+cu128
+2026-02-13 01:24:35,891 - root - INFO - ----------------------------------------
+2026-02-13 01:24:35,891 - root - INFO - ------------------ Configuration ------------------
+2026-02-13 01:24:35,891 - root - INFO - Configuration file: /scratch/wdt/ai/wdt-fcn-wildfire/FCN/config/AFNO.yaml
+2026-02-13 01:24:35,891 - root - INFO - Configuration name: afno_backbone
+2026-02-13 01:24:35,891 - root - INFO - resuming True
+2026-02-13 01:24:35,891 - root - INFO - log_to_wandb True
+2026-02-13 01:24:35,891 - root - INFO - best_checkpoint_path /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/best_ckpt.tar
+2026-02-13 01:24:35,891 - root - INFO - lr 0.0005
+2026-02-13 01:24:35,891 - root - INFO - batch_size 1
+2026-02-13 01:24:35,891 - root - INFO - max_epochs 150
+2026-02-13 01:24:35,891 - root - INFO - scheduler CosineAnnealingLR
+2026-02-13 01:24:35,891 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2026-02-13 01:24:35,891 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2026-02-13 01:24:35,891 - root - INFO - orography False
+2026-02-13 01:24:35,891 - root - INFO - orography_path None
+2026-02-13 01:24:35,891 - root - INFO - exp_dir /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments
+2026-02-13 01:24:35,891 - root - INFO - train_data_path /scratch/wdt/data/FCN_ERA5_DATA_V0/train
+2026-02-13 01:24:35,891 - root - INFO - valid_data_path /scratch/wdt/data/FCN_ERA5_DATA_V0/test
+2026-02-13 01:24:35,891 - root - INFO - inf_data_path /scratch/wdt/data/FCN_ERA5_DATA_V0/out_of_sample
+2026-02-13 01:24:35,891 - root - INFO - time_means_path /scratch/wdt/ai/wdt-fcn-wildfire/FCN/norm_stats/time_means.npy
+2026-02-13 01:24:35,891 - root - INFO - global_means_path /scratch/wdt/ai/wdt-fcn-wildfire/FCN/norm_stats/global_means.npy
+2026-02-13 01:24:35,891 - root - INFO - global_stds_path /scratch/wdt/ai/wdt-fcn-wildfire/FCN/norm_stats/global_stds.npy
+2026-02-13 01:24:35,892 - root - INFO - loss l2
+2026-02-13 01:24:35,892 - root - INFO - num_data_workers 10
+2026-02-13 01:24:35,892 - root - INFO - dt 1
+2026-02-13 01:24:35,892 - root - INFO - n_history 0
+2026-02-13 01:24:35,892 - root - INFO - prediction_type iterative
+2026-02-13 01:24:35,892 - root - INFO - prediction_length 40
+2026-02-13 01:24:35,892 - root - INFO - n_initial_conditions 5
+2026-02-13 01:24:35,892 - root - INFO - ics_type default
+2026-02-13 01:24:35,892 - root - INFO - save_raw_forecasts True
+2026-02-13 01:24:35,892 - root - INFO - save_channel False
+2026-02-13 01:24:35,892 - root - INFO - masked_acc False
+2026-02-13 01:24:35,892 - root - INFO - maskpath None
+2026-02-13 01:24:35,892 - root - INFO - perturb False
+2026-02-13 01:24:35,892 - root - INFO - add_grid False
+2026-02-13 01:24:35,892 - root - INFO - N_grid_channels 0
+2026-02-13 01:24:35,892 - root - INFO - gridtype sinusoidal
+2026-02-13 01:24:35,892 - root - INFO - roll False
+2026-02-13 01:24:35,892 - root - INFO - num_blocks 8
+2026-02-13 01:24:35,892 - root - INFO - nettype afno
+2026-02-13 01:24:35,892 - root - INFO - patch_size 8
+2026-02-13 01:24:35,892 - root - INFO - width 768
+2026-02-13 01:24:35,892 - root - INFO - modes 8
+2026-02-13 01:24:35,892 - root - INFO - target default
+2026-02-13 01:24:35,892 - root - INFO - normalization zscore
+2026-02-13 01:24:35,892 - root - INFO - log_to_screen True
+2026-02-13 01:24:35,892 - root - INFO - save_checkpoint True
+2026-02-13 01:24:35,892 - root - INFO - enable_nhwc False
+2026-02-13 01:24:35,892 - root - INFO - optimizer_type FusedAdam
+2026-02-13 01:24:35,892 - root - INFO - crop_size_x None
+2026-02-13 01:24:35,892 - root - INFO - crop_size_y None
+2026-02-13 01:24:35,892 - root - INFO - two_step_training False
+2026-02-13 01:24:35,892 - root - INFO - plot_animations False
+2026-02-13 01:24:35,892 - root - INFO - add_noise False
+2026-02-13 01:24:35,892 - root - INFO - noise_std 0
+2026-02-13 01:24:35,892 - root - INFO - epsilon_factor 0
+2026-02-13 01:24:35,893 - root - INFO - world_size 20
+2026-02-13 01:24:35,893 - root - INFO - global_batch_size 20
+2026-02-13 01:24:35,893 - root - INFO - experiment_dir /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2
+2026-02-13 01:24:35,893 - root - INFO - checkpoint_path /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:24:35,893 - root - INFO - local_rank 0
+2026-02-13 01:24:35,893 - root - INFO - enable_amp False
+2026-02-13 01:24:35,893 - root - INFO - name afno_backbone_2
+2026-02-13 01:24:35,893 - root - INFO - group era5_precipafno_backbone
+2026-02-13 01:24:35,893 - root - INFO - project ERA5_precip
+2026-02-13 01:24:35,893 - root - INFO - entity garciac2-wildfire-ai-psu
+2026-02-13 01:24:35,893 - root - INFO - ---------------------------------------------------
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/garciac2/.netrc.
+wandb: Currently logged in as: garciac2 (garciac2-wildfire-ai-psu) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.24.2
+wandb: Run data is saved locally in /scratch/wdt/ai/wdt-fcn-wildfire/FCN/wandb/run-20260213_012436-9monb54f
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run afno_backbone_2
+wandb: ⭐️ View project at https://wandb.ai/garciac2-wildfire-ai-psu/ERA5_precip
+wandb: 🚀 View run at https://wandb.ai/garciac2-wildfire-ai-psu/ERA5_precip/runs/9monb54f
+2026-02-13 01:24:37,511 - root - INFO - rank 0, begin data loader init
+2026-02-13 01:24:37,518 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:24:37,521 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:37,521 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:37,521 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:37,522 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:37,528 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:24:37,529 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:24:37,529 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:24:37,529 - root - INFO - Delta t: 6 hours
+2026-02-13 01:24:37,529 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:24:37,529 - root - INFO - rank 0, data loader initialized
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/scratch/wdt/ai/wdt-fcn-wildfire/env/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+2026-02-13 01:25:06,802 - root - INFO - rank 10, begin data loader init
+2026-02-13 01:25:06,809 - root - INFO - rank 11, begin data loader init
+2026-02-13 01:25:06,813 - root - INFO - rank 8, begin data loader init
+2026-02-13 01:25:06,823 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:25:06,823 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:25:06,826 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:25:06,830 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:25:06,830 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:25:06,831 - root - INFO - Delta t: 6 hours
+2026-02-13 01:25:06,831 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:25:06,831 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:25:06,831 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:25:06,832 - root - INFO - Delta t: 6 hours
+2026-02-13 01:25:06,832 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:25:06,833 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:25:06,834 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:25:06,834 - root - INFO - Delta t: 6 hours
+2026-02-13 01:25:06,834 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:25:06,840 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:25:06,840 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:25:06,844 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:25:06,847 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:25:06,847 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:25:06,847 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:25:06,847 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:25:06,848 - root - INFO - Delta t: 6 hours
+2026-02-13 01:25:06,848 - root - INFO - Delta t: 6 hours
+2026-02-13 01:25:06,848 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:25:06,848 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:25:06,849 - root - INFO - rank 10, data loader initialized
+2026-02-13 01:25:06,849 - root - INFO - rank 11, data loader initialized
+2026-02-13 01:25:06,849 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:25:06,849 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:25:06,850 - root - INFO - Delta t: 6 hours
+2026-02-13 01:25:06,850 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:25:06,850 - root - INFO - rank 9, begin data loader init
+2026-02-13 01:25:06,851 - root - INFO - rank 8, data loader initialized
+2026-02-13 01:25:06,862 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/train/1979.h5
+2026-02-13 01:25:06,869 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:25:06,869 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/train. Number of examples: 54020. Image Shape: 720 x 1440 x 20
+2026-02-13 01:25:06,870 - root - INFO - Delta t: 6 hours
+2026-02-13 01:25:06,870 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:25:06,879 - root - INFO - Getting file stats from /scratch/wdt/data/FCN_ERA5_DATA_V0/test/2016.h5
+2026-02-13 01:25:06,883 - root - INFO - Number of samples per year: 1460
+2026-02-13 01:25:06,884 - root - INFO - Found data at path /scratch/wdt/data/FCN_ERA5_DATA_V0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2026-02-13 01:25:06,884 - root - INFO - Delta t: 6 hours
+2026-02-13 01:25:06,884 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2026-02-13 01:25:06,885 - root - INFO - rank 9, data loader initialized
+2026-02-13 01:25:13,587 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,587 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,588 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,588 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,588 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,589 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,595 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,595 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,599 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,600 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,600 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,601 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,602 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,602 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,602 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,603 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,639 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,642 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,652 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,652 - root - INFO - Loading checkpoint /scratch/wdt/ai/wdt-fcn-wildfire/FCN/experiments/afno_backbone/2/training_checkpoints/ckpt.tar
+2026-02-13 01:25:13,991 - root - INFO - Number of trainable model parameters: 74691840
+2026-02-13 01:25:13,992 - root - INFO - Starting Training Loop...
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):
+/scratch/wdt/ai/wdt-fcn-wildfire/FCN/train.py:282: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(self.params.enable_amp):

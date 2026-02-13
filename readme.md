@@ -76,8 +76,6 @@ The training job is configured for **multi-node distributed training** using `to
 ### Submitting a Training Job
 
 ```bash
-cd FCN/
-
 sbatch train.sh
 ```
 
